@@ -1,29 +1,29 @@
 function functionKlik() {
-    alert("Selamat datang di bioskop Satu Untuk Semua.");
+    alert("SELAMAT DATANG DI BIOSKOP SATU UNTUK SEMUA.");
 
-    let input_nama = prompt("Masukkan nama anda.");
+    let input_nama = prompt("Masukkan Nama Anda.");
 
     while(input_nama === "") {
-        alert("Nama harus diisi.");
-        input_nama = prompt("Masukkan nama anda.");
+        alert("Nama Harus Diisi!!");
+        input_nama = prompt("Masukkan Nama Anda.");
     }
 
-    let input_umur = prompt("Berapa usia anda saat ini?");
+    let input_umur = prompt("Berapa Usia Anda Saat Ini? (Harap masukkan angka)");
     while(input_umur === "" || isNaN(input_umur) || parseInt(input_umur) < 1) {
         alert("Usia harus diisi dengan angka dan tidak boleh kurang dari 1.")
-        input_umur = prompt("Berapa usia anda saat ini? (Harap masukkan angka)");
+        input_umur = prompt("Berapa Usia Anda Saat Ini? (Harap masukkan angka)");
     }
 
     if(input_umur > 13) {
-        alert("selamat anda diperbolehkan untuk menonton film.");
+        alert("Selamat Anda Diperbolehkan Untuk Menonton Film.");
     
         // const invalid_list_studio = ["a", "b", "c"];
         const list_studio = ["A", "B", "C"];
-        let pilih_studio = prompt("Silahkan pilih studio anda (A/B/C):");
+        let pilih_studio = prompt("Silahkan Pilih Studio Anda (A/B/C):");
 
         while(pilih_studio === "") {
             alert("Mohon pilih salah satu studio diatas.")
-            pilih_studio = prompt("Silahkan pilih studio anda (A/B/C):");
+            pilih_studio = prompt("Silahkan Pilih Studio Anda (A/B/C):");
         }
         if(list_studio.includes(pilih_studio.toUpperCase())) {
             alert(`Tiket atas nama ${input_nama} dengan umur ${input_umur}, silahkan memasuki studio ${pilih_studio.toUpperCase()}`);
@@ -49,6 +49,6 @@ function functionKlik() {
             alert("Maaf pilihan anda tidak ada dalam daftar. \n silahkan input ulang!");
         }
     }else {
-        alert("Mohon maaf usia anda di bawah 13 tahun, tidak memenuhi syarat masuk.");
+        alert("Mohon maaf usia anda tidak memenuhi syarat masuk, harus di atas 13 tahun.");
     }
 }
